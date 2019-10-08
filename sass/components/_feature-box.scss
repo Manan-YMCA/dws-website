@@ -10,6 +10,7 @@
 
     @include respond(tab-port) {
         padding: 2rem;
+        height: auto;
     }
 
     &__icon {
