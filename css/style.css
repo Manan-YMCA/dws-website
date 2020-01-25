@@ -775,6 +775,10 @@ h1, h2, h3, h4, h5, h6 {
   .filter__link.asc::after {
     content: '(asc)'; }
 
+.table-section {
+  overflow-x: scroll;
+  min-width: 1000px; }
+
 .story {
   width: 75%;
   margin: 0 auto;
