@@ -162,6 +162,7 @@ $color_cloud: #eaeaea;
 
     .accordion-item {
       &__label {
+        display: none;
         padding-bottom: 0;
         cursor: inherit;
 
@@ -232,17 +233,13 @@ $color_cloud: #eaeaea;
       padding: 0;
       transition: inherit;
     }
-
-    &__label {
-      margin-bottom: 1.5rem;
-    }
-
     &.accordion-active {
       display: block;
 
       .accordion-item__container {
         padding: 0;
       }
+
     }
   }
 }

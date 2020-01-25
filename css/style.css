@@ -648,6 +648,7 @@ body {
   .accordion-active {
     background: rgba(233, 30, 99, 0.1); }
     .accordion-active .accordion-item__label {
+      display: none;
       padding-bottom: 0;
       cursor: inherit; }
       .accordion-active .accordion-item__label:hover {
@@ -689,8 +690,6 @@ body {
     .accordion-item__label, .accordion-item__container {
       padding: 0;
       transition: inherit; }
-    .accordion-item__label {
-      margin-bottom: 1.5rem; }
     .accordion-item.accordion-active {
       display: block; }
       .accordion-item.accordion-active .accordion-item__container {
