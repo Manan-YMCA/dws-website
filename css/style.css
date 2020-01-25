@@ -733,51 +733,74 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   min-height: 100vh; }
 
-.table {
-  width: 100%;
-  border: 1px solid #f7f7f7; }
+.accordion-item__label {
+  overflow: scroll; }
 
-.table-header {
-  display: flex;
-  width: 100%;
-  background: #f9f9f9;
-  padding: 18px 0; }
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25; }
 
-.table-row {
-  display: flex;
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  padding: 18px 0; }
+  table-layout: fixed; }
 
-.table-data, .header__item {
-  flex: 1 1 20%;
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em; }
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em; }
+
+table th,
+table td {
+  padding: .625em;
   text-align: center; }
 
-.header__item {
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
   text-transform: uppercase; }
 
-.filter__link {
-  color: #e91e63;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  padding-left: 24px;
-  padding-right: 24px; }
-  .filter__link::after {
-    content: '';
+@media screen and (max-width: 600px) {
+  table {
+    border: 0; }
+  table caption {
+    font-size: 1.3em; }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
-    right: -18px;
-    color: white;
-    font-size: 12px;
-    top: 50%;
-    transform: translateY(-50%); }
-  .filter__link.desc::after {
-    content: '(desc)'; }
-  .filter__link.asc::after {
-    content: '(asc)'; }
-
-.table-section {
-  overflow-x: scroll;
-  min-width: 1000px; }
+    width: 1px; }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em; }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right; }
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase; }
+  table td:last-child {
+    border-bottom: 0; } }
 
 .story {
   width: 75%;
